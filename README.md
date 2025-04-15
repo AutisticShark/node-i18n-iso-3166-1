@@ -1,6 +1,6 @@
 # i18n-iso-3166-1
 
-i18n for ISO 3166-1 country codes. We support Alpha-2, Alpha-3 and Numeric codes from ['Wikipedia: Officially assigned code elements'][iso:3166-1]
+i18n for ISO 3166-1 country codes and names. This library supports Alpha-2, Alpha-3, and Numeric codes from ['Wikipedia: Officially assigned code elements'][iso:3166-1].
 
 ## Installing
 
@@ -53,9 +53,7 @@ var countries = require("i18n-iso-3166-1");
 console.log(countries.getNames("en", {select: "official"})); // { 'AF': 'Afghanistan', 'AL': 'Albania', [...], 'ZM': 'Zambia', 'ZW': 'Zimbabwe' }
 ```
 
-### Supported languages (ISO 639-1)
-
-> In case you want to add new language, please refer [ISO 639-1 table][iso:639-1].
+### Supported languages
 
 - `af`: Afrikaans
 - `am`: Amharic
@@ -136,9 +134,7 @@ console.log(countries.getNames("en", {select: "official"})); // { 'AF': 'Afghani
 - `zh`: Chinese
 - `vi`: Vietnamese
 
-[List of ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-
-### Get all supported languages (ISO 639-1)
+### Get all supported languages
 
 ```javascript
 var countries = require("i18n-iso-3166-1");
@@ -260,12 +256,7 @@ To add a language:
 
 - add a json file under [langs/](langs)
 - add the language to the list in supportedLocales.json at the top
-- add language to section **Supported languages** in [README.md](#supported-languages-iso-639-1)
+- add language to section **Supported languages** in [README.md](#supported-languages)
 - add language to keywords in [package.json](package.json)
 - run `npm run lint` and `npm test`
 - open a PR on GitHub
-
-You can check codes here: https://www.iso.org/obp/ui/#home
-
-[iso:639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-[iso:3166-1]: http://en.wikipedia.org/wiki/ISO_3166-1#Officially_assigned_code_elements
