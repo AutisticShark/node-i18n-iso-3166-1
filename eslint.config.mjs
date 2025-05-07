@@ -14,7 +14,13 @@ const compat = new FlatCompat({
     allConfig: js.configs.all
 });
 
-export default defineConfig([{
+export default defineConfig([
+{
+    ignores: [
+      'node_modules/*',
+    ]
+},
+{
     extends: compat.extends("eslint:recommended", "plugin:prettier/recommended"),
 
     plugins: {
